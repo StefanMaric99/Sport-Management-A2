@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Incident>
+@{
+    ViewData["Title"] = "Incident Manager";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Customer</th>
+            <th>Product</th>
+            <th>Date Opened</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Incident incident in Model)
+        {
+            <tr>
+                <td>@incident.Title</td>
+                <td>@incident.Customer.FullName</td>
+                <td>@incident.Product.Name</td>
+                <td>@incident.DateOpened</td>
+                <td><a class="btn btn-primary" asp-controller="Incident" asp-action="Edit" asp-route-id="@incident.IncidentId">Edit</a></td>
+                <td><a class="btn btn-danger" asp-controller="Incident" asp-action="Delete" asp-route-id="@incident.IncidentId">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<a class="btn btn-primary" asp-controller="Incident" asp-action="Add">Add Incident</a>

@@ -1,0 +1,32 @@
+﻿@model Technician
+@{
+    ViewData["Title"] = "Add a new technician";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<form asp-action="Edit" method="post">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="Name">Full Name</label>
+        <input asp-for="Name" class="form-control">
+        <hr />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control">
+        <hr />
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone">Phone</label>
+        <input asp-for="Phone" class="form-control">
+        <hr />
+    </div>
+
+    <input type="hidden" asp-for="TechnicianId" />
+
+    <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
+    <button type="submit" class="btn btn-warning" asp-controller="Technician" asp-action="List">Cancel</button>
+</form>
