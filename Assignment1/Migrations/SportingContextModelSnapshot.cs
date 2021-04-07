@@ -188,7 +188,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentId = 1,
                             CustomerId = 2,
-                            DateOpened = new DateTime(2021, 2, 26, 9, 12, 51, 42, DateTimeKind.Local).AddTicks(2733),
+                            DateOpened = new DateTime(2021, 4, 6, 15, 44, 41, 950, DateTimeKind.Local).AddTicks(9857),
                             Description = "Customer is having issues with installation on Win 10",
                             ProductId = 1,
                             TechnicianId = 3,
@@ -198,7 +198,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentId = 2,
                             CustomerId = 3,
-                            DateOpened = new DateTime(2021, 2, 26, 9, 12, 51, 42, DateTimeKind.Local).AddTicks(3349),
+                            DateOpened = new DateTime(2021, 4, 6, 15, 44, 41, 951, DateTimeKind.Local).AddTicks(523),
                             Description = "Encountered compatability issues",
                             ProductId = 2,
                             TechnicianId = 3,
@@ -208,7 +208,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentId = 3,
                             CustomerId = 1,
-                            DateOpened = new DateTime(2021, 2, 26, 9, 12, 51, 42, DateTimeKind.Local).AddTicks(3371),
+                            DateOpened = new DateTime(2021, 4, 6, 15, 44, 41, 951, DateTimeKind.Local).AddTicks(546),
                             Description = "Unknown error when attempting to open program",
                             ProductId = 1,
                             TechnicianId = 3,
@@ -247,7 +247,7 @@ namespace Assignment1.Migrations
                             ProductId = 1,
                             Code = "TRNY10",
                             Name = "Tournament Master",
-                            ReleaseDate = new DateTime(2021, 2, 26, 9, 12, 51, 39, DateTimeKind.Local).AddTicks(5997),
+                            ReleaseDate = new DateTime(2021, 4, 6, 15, 44, 41, 948, DateTimeKind.Local).AddTicks(2465),
                             YearlyPrice = 10.99
                         },
                         new
@@ -255,7 +255,7 @@ namespace Assignment1.Migrations
                             ProductId = 2,
                             Code = "DRAFT10",
                             Name = "Draft Manager 2.0",
-                            ReleaseDate = new DateTime(2021, 2, 26, 9, 12, 51, 41, DateTimeKind.Local).AddTicks(9444),
+                            ReleaseDate = new DateTime(2021, 4, 6, 15, 44, 41, 950, DateTimeKind.Local).AddTicks(6365),
                             YearlyPrice = 5.9900000000000002
                         },
                         new
@@ -263,7 +263,7 @@ namespace Assignment1.Migrations
                             ProductId = 3,
                             Code = "TRNY20",
                             Name = "Tournament Master 2.0",
-                            ReleaseDate = new DateTime(2021, 2, 26, 9, 12, 51, 41, DateTimeKind.Local).AddTicks(9479),
+                            ReleaseDate = new DateTime(2021, 4, 6, 15, 44, 41, 950, DateTimeKind.Local).AddTicks(6406),
                             YearlyPrice = 12.99
                         });
                 });
