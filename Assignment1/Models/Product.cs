@@ -16,6 +16,7 @@ namespace Assignment1.Models
         [Required(ErrorMessage = "A name is required.")]
         public string Name { get; set; }
 
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:N}")]
         [Required(ErrorMessage = "A price is required.")]
         [Display(Name = "Yearly Price")]
         public double YearlyPrice { get; set; }
