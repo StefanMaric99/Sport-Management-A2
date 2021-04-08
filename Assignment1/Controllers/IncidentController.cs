@@ -81,12 +81,6 @@ namespace Assignment1.Controllers
 
 
             return View("Edit", model);
-            //ViewData["Message"] = "incidents page";
-            //ViewBag.Action = "Add";
-            //ViewBag.Customers = context.Customers.OrderBy(c => c.FirstName).ToList();
-            //ViewBag.Products = context.Product.OrderBy(p => p.Name).ToList();
-            //ViewBag.Technicians = context.Technicians.OrderBy(t => t.Name).ToList();
-            //return View("Edit", new Incident());
         }
         [HttpGet]
         public IActionResult Edit(int id)
@@ -137,12 +131,7 @@ namespace Assignment1.Controllers
             model.Action = "Edit";
 
             return View("Edit", model);
-            //ViewBag.Action = "Edit";
-            //ViewBag.Customers = context.Customers.OrderBy(c => c.FirstName).ToList();
-            //ViewBag.Products = context.Product.OrderBy(p => p.Name).ToList();
-            //ViewBag.Technicians = context.Technicians.OrderBy(t => t.Name).ToList();
-            //var incident = context.Incidents.Include(c => c.Customer).Include(p => p.Product).Include(t =>t.Technician).FirstOrDefault(c => c.IncidentId == id);
-            //return View(incident);
+
         }
         [HttpPost]
         public IActionResult Edit(IncidentsViewModel model)
