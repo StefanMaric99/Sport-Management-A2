@@ -6,6 +6,13 @@
     <title>@ViewData["Title"] - Assignment1</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        #@ViewContext.RouteData.Values["controller"].ToString() {
+            color: black;
+            border-color: black;
+            background-color: white;
+        }
+    </style>
 </head>
 <body class=".bg-light.bg-gradient">
     <header>
@@ -18,32 +25,31 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
+
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " asp-controller="Product" asp-action="List">Products</a>
+                            <a id="Product" class="nav-link " asp-controller="Product" asp-action="List">Products</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " asp-controller="Technician" asp-action="List">Technicians</a>
+                            <a id="Technician" class="nav-link " asp-controller="Technician" asp-action="List">Technicians</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " asp-controller="Customer" asp-action="List">Customers</a>
+                            <a id="Customer" class="nav-link " asp-controller="Customer" asp-action="List">Customers</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" <!-- asp-controller="Home" asp-action="Registration"-->Registration</a>
+                            <a id="Registration" class="nav-link" <!-- asp-controller="Home" asp-action="Registration"-->Registration</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " asp-controller="Incident" asp-action="List">Incidents</a>
+                            <a id="Incident" class="nav-link " asp-controller="Incident" asp-action="List">Incidents</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " asp-controller="Home" asp-action="About">About</a>
+                            <a id="About" class="nav-link " asp-controller="Home" asp-action="About">About</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
