@@ -5803,11 +5803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kg149\\Desktop\\Sport-Management\\Assignment1\\Assignment1.csproj",
+      "projectUniqueName": "C:\\Users\\kg149\\Source\\Repos\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
       "projectName": "Assignment1",
-      "projectPath": "C:\\Users\\kg149\\Desktop\\Sport-Management\\Assignment1\\Assignment1.csproj",
+      "projectPath": "C:\\Users\\kg149\\Source\\Repos\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
       "packagesPath": "C:\\Users\\kg149\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kg149\\Desktop\\Sport-Management\\Assignment1\\obj\\",
+      "outputPath": "C:\\Users\\kg149\\Source\\Repos\\Sport-Management-A2\\Assignment1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kg149\\AppData\\Roaming\\NuGet\\NuGet.Config",
