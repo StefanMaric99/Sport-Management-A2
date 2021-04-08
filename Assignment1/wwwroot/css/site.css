@@ -12,27 +12,6 @@ a {
   color: #0366d6;
 }
 
-#header-top-left {
-    padding: 1px 6px;
-}
-
-    #header-top-left:hover {
-        text-shadow: 0 0 10px white;
-    }
-
-nav a:not(#header-top-left):hover {
-    background-color: rgba(255,255,255,0.3);
-    color: white !important;
-}
-
-input[type="date"] {
-    display: block;
-}
-
-th {
-    background-image: linear-gradient(white, #cfd1d2);
-}
-
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
