@@ -18,7 +18,7 @@ namespace Assignment1.Controllers
         {
             context = ctx;
         }
-        public IActionResult List()
+        public IActionResult List(string filter)
         {
             // Returns list of incidents ordered by title
             IncidentsViewModel model = new IncidentsViewModel();
@@ -29,10 +29,22 @@ namespace Assignment1.Controllers
                                                          .Include(p => p.Product)
                                                          .Include(t => t.Technician);
 
-            // add filtering
+            if (filter == "open")
+            {
+                incidents = incidentsQ.Where(d => d.DateClosed == null).ToList();
+            }
+            else if (filter == "unassigned")
+            {
+                incidents = incidentsQ.Where(t => t.TechnicianId == null).ToList();
+            }
+            else
+            { 
 
-            incidents = incidentsQ.ToList();
+                incidents = incidentsQ.OrderBy(t => t.TechnicianId).ToList();
+            }
+           
             model.incidents = incidents;
+            model.Filter = filter;
 
             return View(model);
         }
@@ -81,12 +93,6 @@ namespace Assignment1.Controllers
 
 
             return View("Edit", model);
-            //ViewData["Message"] = "incidents page";
-            //ViewBag.Action = "Add";
-            //ViewBag.Customers = context.Customers.OrderBy(c => c.FirstName).ToList();
-            //ViewBag.Products = context.Product.OrderBy(p => p.Name).ToList();
-            //ViewBag.Technicians = context.Technicians.OrderBy(t => t.Name).ToList();
-            //return View("Edit", new Incident());
         }
         [HttpGet]
         public IActionResult Edit(int id)
@@ -137,12 +143,7 @@ namespace Assignment1.Controllers
             model.Action = "Edit";
 
             return View("Edit", model);
-            //ViewBag.Action = "Edit";
-            //ViewBag.Customers = context.Customers.OrderBy(c => c.FirstName).ToList();
-            //ViewBag.Products = context.Product.OrderBy(p => p.Name).ToList();
-            //ViewBag.Technicians = context.Technicians.OrderBy(t => t.Name).ToList();
-            //var incident = context.Incidents.Include(c => c.Customer).Include(p => p.Product).Include(t =>t.Technician).FirstOrDefault(c => c.IncidentId == id);
-            //return View(incident);
+
         }
         [HttpPost]
         public IActionResult Edit(IncidentsViewModel model)
