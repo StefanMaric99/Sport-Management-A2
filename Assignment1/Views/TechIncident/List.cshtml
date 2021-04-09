@@ -1,0 +1,50 @@
+﻿@model GetTechViewModel
+@{
+    ViewData["Title"] = "Incident Manager";
+}
+<h2 class="h">@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<div class="flex flex-column">
+    <div>
+        <h4 class="h">
+            Technician @Model.Technician.Name
+        </h4>
+
+    </div>
+</div>
+@if (Model.Incidents.Any())
+{
+    <table class="table mx-auto w-100 t">
+
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Customer</th>
+                <th>Product</th>
+                <th>Date Opened</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (Incident incident in Model.Incidents)
+            {
+                <tr>
+                    <td>@incident.Title</td>
+                    <td>@incident.Customer.FullName</td>
+                    <td>@incident.Product.Name</td>
+                    <td>@incident.DateOpened</td>
+                    <td><a class="btn btn-primary" asp-controller="Incident" asp-action="Edit" asp-route-id="@incident.IncidentId">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <hr />
+    <h3>No Open Incidents Found</h3>
+}
+<a class="btn btn-primary" asp-action="GetTechnician" asp-controller="TechIncident">Switch Technician</a>
