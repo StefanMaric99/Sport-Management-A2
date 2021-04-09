@@ -5798,19 +5798,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\conde\\.nuget\\packages\\": {}
+    "C:\\Users\\Adam\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
+      "projectUniqueName": "C:\\Users\\Adam\\source\\repos\\Sport-Management\\Assignment1\\Assignment1.csproj",
       "projectName": "Assignment1",
-      "projectPath": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
-      "packagesPath": "C:\\Users\\conde\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\obj\\",
+      "projectPath": "C:\\Users\\Adam\\source\\repos\\Sport-Management\\Assignment1\\Assignment1.csproj",
+      "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Adam\\source\\repos\\Sport-Management\\Assignment1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\conde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5869,7 +5873,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
