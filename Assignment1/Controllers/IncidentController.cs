@@ -38,9 +38,9 @@ namespace Assignment1.Controllers
                 incidents = incidentsQ.Where(t => t.TechnicianId == null).ToList();
             }
             else
-            {
+            { 
 
-                incidents = incidentsQ.ToList();
+                incidents = incidentsQ.OrderBy(t => t.TechnicianId).ToList();
             }
            
             model.incidents = incidents;
