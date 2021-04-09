@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adam\\source\\repos\\Sport-Management\\Assignment1\\Assignment1.csproj": {}
+    "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adam\\source\\repos\\Sport-Management\\Assignment1\\Assignment1.csproj": {
+    "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adam\\source\\repos\\Sport-Management\\Assignment1\\Assignment1.csproj",
+        "projectUniqueName": "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
         "projectName": "Assignment1",
-        "projectPath": "C:\\Users\\Adam\\source\\repos\\Sport-Management\\Assignment1\\Assignment1.csproj",
-        "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adam\\source\\repos\\Sport-Management\\Assignment1\\obj\\",
+        "projectPath": "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
+        "packagesPath": "C:\\Users\\Stefa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Stefa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -76,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
