@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
         "packagesPath": "C:\\Users\\conde\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\obj\\",
+=======
+    "C:\\Users\\kg149\\Documents\\GitHub\\Sport-Management-A2\\Assignment1\\Assignment1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\kg149\\Documents\\GitHub\\Sport-Management-A2\\Assignment1\\Assignment1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kg149\\Documents\\GitHub\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
+        "projectName": "Assignment1",
+        "projectPath": "C:\\Users\\kg149\\Documents\\GitHub\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
+        "packagesPath": "C:\\Users\\kg149\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kg149\\Documents\\GitHub\\Sport-Management-A2\\Assignment1\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\conde\\AppData\\Roaming\\NuGet\\NuGet.Config",
