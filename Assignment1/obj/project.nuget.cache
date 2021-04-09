@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "5LSPcCwfFQXwC2NJ7OUuRnpGU3xfDnHecR0y3eMfQSD6UEhSobow05t7i51m/JglHs9/ADXoL3Mswvn7nz+HhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
-=======
-  "dgSpecHash": "z2ISoi4M8OD8gCp+Nqy2lV4ZOZHKE8zHzR8PmezxGYa9zlVw/ZjJKFJtebJ7WWtFQulKTfo9pQunVeFwbgnZXg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\kg149\\Documents\\GitHub\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
->>>>>>> main
   "expectedPackageFiles": [
     "C:\\Users\\conde\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\conde\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

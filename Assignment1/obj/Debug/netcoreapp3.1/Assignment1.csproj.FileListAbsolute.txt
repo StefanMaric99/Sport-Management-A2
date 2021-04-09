@@ -620,7 +620,6 @@ C:\Users\kg149\Documents\GitHub\Sport-Management-A2\Assignment1\obj\Debug\netcor
 C:\Users\kg149\Documents\GitHub\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.dll
 C:\Users\kg149\Documents\GitHub\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.pdb
 C:\Users\kg149\Documents\GitHub\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.genruntimeconfig.cache
-<<<<<<< HEAD
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\bin\Debug\netcoreapp3.1\Assignment1.exe
@@ -712,5 +711,3 @@ C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\obj
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.dll
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.pdb
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.genruntimeconfig.cache
-=======
->>>>>>> main
