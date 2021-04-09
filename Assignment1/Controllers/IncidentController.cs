@@ -18,7 +18,7 @@ namespace Assignment1.Controllers
         {
             context = ctx;
         }
-        public IActionResult List()
+        public IActionResult List(string filter)
         {
             // Returns list of incidents ordered by title
             IncidentsViewModel model = new IncidentsViewModel();
@@ -29,10 +29,22 @@ namespace Assignment1.Controllers
                                                          .Include(p => p.Product)
                                                          .Include(t => t.Technician);
 
-            // add filtering
+            if (filter == "open")
+            {
+                incidents = incidentsQ.Where(d => d.DateClosed == null).ToList();
+            }
+            else if (filter == "unassigned")
+            {
+                incidents = incidentsQ.Where(t => t.TechnicianId == null).ToList();
+            }
+            else
+            {
 
-            incidents = incidentsQ.ToList();
+                incidents = incidentsQ.ToList();
+            }
+           
             model.incidents = incidents;
+            model.Filter = filter;
 
             return View(model);
         }

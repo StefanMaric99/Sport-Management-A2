@@ -20,7 +20,7 @@ namespace Assignment1.Models
 
         [Display(Name = "Technician")]
         public Technician Technician { get; set; }
-        public int TechnicianId { get; set; }
+        public int? TechnicianId { get; set; }
 
         [Display(Name = "Date Opened")]
         [DataType(DataType.Date)]
