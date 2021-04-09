@@ -88,7 +88,7 @@ namespace Assignment1.Migrations
                     ProductId = table.Column<int>(type: "int", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TechnicianId = table.Column<int>(type: "int", nullable: false),
+                    TechnicianId = table.Column<int>(type: "int", nullable: true),
                     DateOpened = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateClosed = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -112,7 +112,7 @@ namespace Assignment1.Migrations
                         column: x => x.TechnicianId,
                         principalTable: "Technicians",
                         principalColumn: "TechnicianId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.InsertData(
@@ -131,9 +131,9 @@ namespace Assignment1.Migrations
                 columns: new[] { "ProductId", "Code", "Name", "ReleaseDate", "YearlyPrice" },
                 values: new object[,]
                 {
-                    { 1, "TRNY10", "Tournament Master", new DateTime(2021, 2, 26, 9, 12, 51, 39, DateTimeKind.Local).AddTicks(5997), 10.99 },
-                    { 2, "DRAFT10", "Draft Manager 2.0", new DateTime(2021, 2, 26, 9, 12, 51, 41, DateTimeKind.Local).AddTicks(9444), 5.9900000000000002 },
-                    { 3, "TRNY20", "Tournament Master 2.0", new DateTime(2021, 2, 26, 9, 12, 51, 41, DateTimeKind.Local).AddTicks(9479), 12.99 }
+                    { 1, "TRNY10", "Tournament Master", new DateTime(2021, 4, 8, 23, 13, 43, 245, DateTimeKind.Local).AddTicks(8979), 10.99 },
+                    { 2, "DRAFT10", "Draft Manager 2.0", new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(2603), 5.9900000000000002 },
+                    { 3, "TRNY20", "Tournament Master 2.0", new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(2639), 12.99 }
                 });
 
             migrationBuilder.InsertData(
@@ -164,17 +164,17 @@ namespace Assignment1.Migrations
             migrationBuilder.InsertData(
                 table: "Incidents",
                 columns: new[] { "IncidentId", "CustomerId", "DateClosed", "DateOpened", "Description", "ProductId", "TechnicianId", "Title" },
-                values: new object[] { 3, 1, null, new DateTime(2021, 2, 26, 9, 12, 51, 42, DateTimeKind.Local).AddTicks(3371), "Unknown error when attempting to open program", 1, 3, "Error while attempting to run program" });
+                values: new object[] { 3, 1, null, new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(6578), "Unknown error when attempting to open program", 1, 3, "Error while attempting to run program" });
 
             migrationBuilder.InsertData(
                 table: "Incidents",
                 columns: new[] { "IncidentId", "CustomerId", "DateClosed", "DateOpened", "Description", "ProductId", "TechnicianId", "Title" },
-                values: new object[] { 2, 3, null, new DateTime(2021, 2, 26, 9, 12, 51, 42, DateTimeKind.Local).AddTicks(3349), "Encountered compatability issues", 2, 3, "Error launching program" });
+                values: new object[] { 2, 3, null, new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(6556), "Encountered compatability issues", 2, 3, "Error launching program" });
 
             migrationBuilder.InsertData(
                 table: "Incidents",
                 columns: new[] { "IncidentId", "CustomerId", "DateClosed", "DateOpened", "Description", "ProductId", "TechnicianId", "Title" },
-                values: new object[] { 1, 2, null, new DateTime(2021, 2, 26, 9, 12, 51, 42, DateTimeKind.Local).AddTicks(2733), "Customer is having issues with installation on Win 10", 1, 3, "Could not install" });
+                values: new object[] { 1, 2, null, new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(5921), "Customer is having issues with installation on Win 10", 1, 3, "Could not install" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Customers_CountryId",

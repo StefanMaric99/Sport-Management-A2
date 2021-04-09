@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,8 +20,10 @@ namespace Assignment1.Models
         public string Description { get; set; }
 
         [Display(Name = "Technician")]
+        [ForeignKey("TechnicianId")] // Specifies that this instance of technician matches the technicianId property
         public Technician Technician { get; set; }
         public int? TechnicianId { get; set; }
+        
 
         [Display(Name = "Date Opened")]
         [DataType(DataType.Date)]
