@@ -87,3 +87,8 @@ nav a:hover {
 input[type="date"] {
     display: block;
 }
+
+.input-validation-error {
+    background: lavenderblush;
+    border: 1px solid red;
+}

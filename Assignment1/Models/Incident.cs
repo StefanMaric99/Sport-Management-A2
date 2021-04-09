@@ -13,10 +13,16 @@ namespace Assignment1.Models
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
         public Product Product { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please enter a valid ProductId")]
         public int ProductId { get; set; }
+
+        [Required(ErrorMessage = "Please enter a valid Title")]
+        [StringLength(21, ErrorMessage = "Only 1-21 characters are allowed")]
+        
         public string Title { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Please enter a Description")]
+        [StringLength(200, ErrorMessage = "Only a maximum of 200 characters are allowed")]
         public string Description { get; set; }
 
         [Display(Name = "Technician")]

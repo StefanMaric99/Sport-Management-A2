@@ -7,8 +7,6 @@
 
 <form asp-action="Edit" asp-controller="Incident" method="post">
 
-    <div asp-validation-summary="All" class="text-danger"></div>
-
     <div class="form-group">
         <label asp-for="currentIncident.CustomerId">Customer</label>
         <select class="form-control" asp-for="currentIncident.CustomerId" asp-items="Model.customers">
@@ -35,12 +33,14 @@
     <div class="form-group">
         <label asp-for="currentIncident.Title">Title</label>
         <input asp-for="currentIncident.Title" class="form-control">
+        @Html.ValidationMessageFor(model => model.currentIncident.Title, "", new { @class = "text-danger" })
         <hr />
     </div>
 
     <div class="form-group">
         <label asp-for="currentIncident.Description">Description</label>
         <input asp-for="currentIncident.Description" class="form-control">
+        @Html.ValidationMessageFor(model => model.currentIncident.Description, "", new { @class = "text-danger" })
         <hr />
     </div>
 
