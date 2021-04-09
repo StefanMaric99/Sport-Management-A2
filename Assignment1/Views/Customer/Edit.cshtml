@@ -1,47 +1,50 @@
 ﻿@model Customer
-@{
-    ViewData["Title"] = "Add a new customer";
-}
+@{ ViewData["Title"] = "Add a new customer"; }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<form asp-action="Edit" method="post">
 
-    <div asp-validation-summary="All" class="text-danger"></div>
+<form asp-action="Edit" method="post">
 
     <div class="form-group">
         <label asp-for="FirstName">First Name</label>
         <input asp-for="FirstName" class="form-control">
+        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
         <hr />
     </div>
 
     <div class="form-group">
         <label asp-for="LastName">Last Name</label>
         <input asp-for="LastName" class="form-control">
+        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
         <hr />
     </div>
 
     <div class="form-group">
         <label asp-for="Address">Address</label>
         <input asp-for="Address" class="form-control">
+        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
         <hr />
     </div>
 
     <div class="form-group">
         <label asp-for="City">City</label>
         <input asp-for="City" class="form-control">
+        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
         <hr />
     </div>
 
     <div class="form-group">
         <label asp-for="State">State</label>
         <input asp-for="State" class="form-control">
+        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
         <hr />
     </div>
 
     <div class="form-group">
         <label asp-for="PostalCode">Postal Code</label>
         <input asp-for="PostalCode" class="form-control">
+        @Html.ValidationMessageFor(model => model.PostalCode, "", new { @class = "text-danger" })
         <hr />
     </div>
 
@@ -50,21 +53,24 @@
         <select asp-for="CountryId" class="form-control">
             @foreach (Country c in ViewBag.Countries)
             {
-                <option value="@c.CountryId">@c.Name</option>            
-            }
+<option value="@c.CountryId">@c.Name</option>
+}
         </select>
+        @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
         <hr />
     </div>
 
     <div class="form-group">
         <label asp-for="Phone">Phone</label>
         <input asp-for="Phone" class="form-control">
+        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
         <hr />
     </div>
 
     <div class="form-group">
         <label asp-for="Email">Email</label>
         <input asp-for="Email" class="form-control">
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
         <hr />
     </div>
 
@@ -73,3 +79,4 @@
     <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
     <button type="submit" class="btn btn-warning" asp-controller="Customer" asp-action="List">Cancel</button>
 </form>
+

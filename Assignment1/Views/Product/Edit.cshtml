@@ -4,26 +4,29 @@
 <h3>@ViewData["Message"]</h3>
 
 <form asp-action="Edit" method="post">
-    <div asp-validation-summary="All" class="text-danger"></div>
 
     <div class="form-group">
         <label asp-for="Code">Code</label>
         <input asp-for="Code" class="form-control">
+        @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
         <hr />
     </div>
     <div class="form-group">
         <label asp-for="Name">Name</label>
         <input asp-for="Name" class="form-control">
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
         <hr />
     </div>
     <div class="form-group">
         <label asp-for="YearlyPrice">Yearly Price</label>
         <input asp-for="YearlyPrice" class="form-control">
+        @Html.ValidationMessageFor(model => model.YearlyPrice, "", new { @class = "text-danger" })
         <hr />
     </div>
     <div class="form-group">
         <label asp-for="ReleaseDate">Release Date</label>
         <input asp-for="ReleaseDate" type="datetime-local" id="date">
+        @Html.ValidationMessageFor(model => model.ReleaseDate, "", new { @class = "text-danger" })
         <hr />
     </div>
 

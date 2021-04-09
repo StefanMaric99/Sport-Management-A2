@@ -5798,19 +5798,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kg149\\.nuget\\packages\\": {}
+    "C:\\Users\\conde\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kg149\\Desktop\\Sport-Management\\Assignment1\\Assignment1.csproj",
+      "projectUniqueName": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
       "projectName": "Assignment1",
-      "projectPath": "C:\\Users\\kg149\\Desktop\\Sport-Management\\Assignment1\\Assignment1.csproj",
-      "packagesPath": "C:\\Users\\kg149\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kg149\\Desktop\\Sport-Management\\Assignment1\\obj\\",
+      "projectPath": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
+      "packagesPath": "C:\\Users\\conde\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\conde\\Downloads\\Sport-Management-A2\\Sport-Management-A2\\Assignment1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kg149\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\conde\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5869,7 +5869,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
