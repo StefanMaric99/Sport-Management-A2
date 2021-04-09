@@ -25,6 +25,10 @@ namespace Assignment1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add cache and sessions
+            services.AddMemoryCache();
+            services.AddSession();
+
             services.AddControllersWithViews();
 
             services.AddRouting(options =>
@@ -56,6 +60,9 @@ namespace Assignment1
             app.UseRouting();
 
             app.UseAuthorization();
+
+            // Session
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

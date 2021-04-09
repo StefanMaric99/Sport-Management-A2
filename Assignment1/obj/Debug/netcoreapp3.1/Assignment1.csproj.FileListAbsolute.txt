@@ -711,3 +711,6 @@ C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\obj
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.dll
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.pdb
 C:\Users\conde\Downloads\Sport-Management-A2\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Assignment1.genruntimeconfig.cache
+C:\Users\kg149\Documents\GitHub\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Razor\Views\TechIncident\GetTechnician.cshtml.g.cs
+C:\Users\kg149\Documents\GitHub\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Razor\Views\TechIncident\List.cshtml.g.cs
+C:\Users\kg149\Documents\GitHub\Sport-Management-A2\Assignment1\obj\Debug\netcoreapp3.1\Razor\Views\TechIncident\Edit.cshtml.g.cs
