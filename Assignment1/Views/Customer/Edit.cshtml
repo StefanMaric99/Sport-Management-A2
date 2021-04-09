@@ -1,7 +1,7 @@
 ﻿@model Customer
 @{ ViewData["Title"] = "Add a new customer"; }
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+
 
 
 <form asp-action="Edit" method="post">
@@ -77,6 +77,6 @@
     <input type="hidden" asp-for="CustomerId" />
 
     <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
-    <button type="submit" class="btn btn-warning" asp-controller="Customer" asp-action="List">Cancel</button>
+    <button type="submit" class="btn btn-danger" asp-controller="Customer" asp-action="List">Cancel</button>
 </form>
 

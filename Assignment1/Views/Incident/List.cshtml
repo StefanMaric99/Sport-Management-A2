@@ -2,42 +2,43 @@
 @{
     ViewData["Title"] = "Incident Manager";
 }
-<h2>@ViewData["Title"]</h2>
+<h2 >@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<table class="table table-bordered table-responsive">
+<!-- Add pills -->
+<nav class="nav nav-pills nav-justified">
+    <a asp-controller="Incident" asp-action="List" asp-route-filter="all" class="pill-link nav-item nav-link">All</a>
+    <a asp-controller="Incident" asp-action="List" asp-route-filter="unassigned" class="pill-link nav-item nav-link">Unassigned</a>
+    <a asp-controller="Incident" asp-action="List" asp-route-filter="open" class="pill-link nav-item nav-link">Open</a>
+</nav>
 
-    <!-- Add pills -->
-    <nav class="nav nav-pills nav-justified">
-        <a  asp-controller="Incident" asp-action="List" asp-route-filter="all" class="nav-item nav-link">All</a>
-        <a  asp-controller="Incident" asp-action="List" asp-route-filter="unassigned" class="nav-item nav-link">Unassigned</a>
-        <a  asp-controller="Incident" asp-action="List" asp-route-filter="open" class="nav-item nav-link">Open</a>
-    </nav>
-        <thead>
+<table class="table mx-auto w-100 t">
+
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Customer</th>
+            <th>Product</th>
+            <th>Date Opened</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Incident incident in Model.incidents)
+        {
             <tr>
-                <th>Title</th>
-                <th>Customer</th>
-                <th>Product</th>
-                <th>Date Opened</th>
-                <th></th>
-                <th></th>
+                <td>@incident.Title</td>
+                <td>@incident.Customer.FullName</td>
+                <td>@incident.Product.Name</td>
+                <td>@incident.DateOpened</td>
+                <td><a class="btn btn-primary" asp-controller="Incident" asp-action="Edit" asp-route-id="@incident.IncidentId">Edit</a></td>
+                <td><a class="btn btn-danger" asp-controller="Incident" asp-action="Delete" asp-route-id="@incident.IncidentId">Delete</a></td>
             </tr>
-        </thead>
+        }
 
-        <tbody>
-            @foreach (Incident incident in Model.incidents)
-            {
-                <tr>
-                    <td>@incident.Title</td>
-                    <td>@incident.Customer.FullName</td>
-                    <td>@incident.Product.Name</td>
-                    <td>@incident.DateOpened</td>
-                    <td><a class="btn btn-primary" asp-controller="Incident" asp-action="Edit" asp-route-id="@incident.IncidentId">Edit</a></td>
-                    <td><a class="btn btn-danger" asp-controller="Incident" asp-action="Delete" asp-route-id="@incident.IncidentId">Delete</a></td>
-                </tr>
-            }
-
-        </tbody>
+    </tbody>
 </table>
 
 <a class="btn btn-primary" asp-controller="Incident" asp-action="Add">Add Incident</a>

@@ -5,6 +5,33 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  font-size: 1.7rem;
+  padding-top: 0;
+}
+
+.home-link {
+    color: #2d474d;
+}
+
+    .home-link:hover {
+        color: #2d474d;
+    }
+
+
+body {
+    background: -moz-linear-gradient(0deg, rgba(254,255,255,1) 18%, rgba(122,138,142,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(254,255,255,1) 18%, rgba(122,138,142,1) 100%);
+    background: linear-gradient(0deg, rgba(254,255,255,1) 18%, rgba(122,138,142,1) 100%);
+}
+
+.navbar {
+    background-color: #293336 !important;
+    padding: 15px !important;
+    border-bottom: none !important;
+}
+
+.p-3 {
+    padding-bottom: 5rem !important;
 }
 
 /* Provide sufficient contrast against white background */
@@ -12,16 +39,51 @@ a {
   color: #0366d6;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.pill-link {
+    color: #fff;
+    margin: 25px;
+    background-color: #2d474d;
+
+}
+    .pill-link:active {
+        background-color: #4e6064 !important;
+    }
+
+.btn-danger {
+    background-color: #df4950;
+    border-color: #df4950;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #619497;
+    border-color: #619497;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #3d6872;
+    border-color: #3d6872;
+}
+    .btn-primary:focus {
+        color: #fff;
+        background-color: #3d6872 !important;
+        border-color: #3d6872 !important;
+    }
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #5a8e9a;
+    border-color: #5a8e9a;
+}
+
+
+.t {
+    border: 1px solid #fff;
+}
+
+.h {
+    margin-bottom: 1.5rem;
 }
 
 /* Sticky footer styles
@@ -63,11 +125,12 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    background-color: #293336 !important;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 header {

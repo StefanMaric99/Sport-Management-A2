@@ -1,7 +1,9 @@
 ﻿@model Product
-@{ ViewData["Title"] = "Add a new product"; }
+@{ ViewData["Title"] = "Add a new product"; 
+    
+}
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+
 
 <form asp-action="Edit" method="post">
 
@@ -33,5 +35,5 @@
     <input type="hidden" asp-for="ProductId" />
 
     <button type="submit" class="btn btn-primary">@ViewBag.Action</button>
-    <button type="submit" class="btn btn-warning" asp-controller="Product" asp-action="List">Cancel</button>
+    <button type="submit" class="btn btn-danger" asp-controller="Product" asp-action="List">Cancel</button>
 </form>
