@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\kg149\\Documents\\GitHub\\Sport-Management-A2\\Assignment1\\Assignment1.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kg149\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
+        "projectName": "Assignment1",
+        "projectPath": "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\Assignment1.csproj",
+        "packagesPath": "C:\\Users\\Stefa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Stefa\\Desktop\\ASP-Proj-A2\\Sport-Management-A2\\Assignment1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Stefa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> main
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +43,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +54,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -73,7 +88,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+>>>>>>> main
         }
       }
     }
