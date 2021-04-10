@@ -81,10 +81,6 @@ namespace Assignment1
                 endpoints.MapControllerRoute(
                    name: "Customers",
                                    pattern: "{controller=Customer}/{action=List}");
-
-                endpoints.MapControllerRoute(
-                   name: "Registration",
-                                   pattern: "{controller=Registration}/{action=Check}");
             });
         }
     }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Assignment1.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,8 +26,8 @@ namespace Assignment1.Migrations
                 {
                     ProductId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Code = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     YearlyPrice = table.Column<double>(type: "float", nullable: false),
                     ReleaseDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -42,8 +42,8 @@ namespace Assignment1.Migrations
                 {
                     TechnicianId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -57,14 +57,14 @@ namespace Assignment1.Migrations
                 {
                     CustomerId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    City = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    State = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    PostalCode = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    State = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PostalCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CountryId = table.Column<int>(type: "int", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -86,8 +86,8 @@ namespace Assignment1.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CustomerId = table.Column<int>(type: "int", nullable: false),
                     ProductId = table.Column<int>(type: "int", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TechnicianId = table.Column<int>(type: "int", nullable: true),
                     DateOpened = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DateClosed = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -131,9 +131,9 @@ namespace Assignment1.Migrations
                 columns: new[] { "ProductId", "Code", "Name", "ReleaseDate", "YearlyPrice" },
                 values: new object[,]
                 {
-                    { 1, "TRNY10", "Tournament Master", new DateTime(2021, 4, 9, 12, 27, 49, 408, DateTimeKind.Local).AddTicks(2291), 10.99 },
-                    { 2, "DRAFT10", "Draft Manager 2.0", new DateTime(2021, 4, 9, 12, 27, 49, 410, DateTimeKind.Local).AddTicks(7535), 5.9900000000000002 },
-                    { 3, "TRNY20", "Tournament Master 2.0", new DateTime(2021, 4, 9, 12, 27, 49, 410, DateTimeKind.Local).AddTicks(7571), 12.99 }
+                    { 1, "TRNY10", "Tournament Master", new DateTime(2021, 4, 8, 23, 13, 43, 245, DateTimeKind.Local).AddTicks(8979), 10.99 },
+                    { 2, "DRAFT10", "Draft Manager 2.0", new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(2603), 5.9900000000000002 },
+                    { 3, "TRNY20", "Tournament Master 2.0", new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(2639), 12.99 }
                 });
 
             migrationBuilder.InsertData(
@@ -164,17 +164,17 @@ namespace Assignment1.Migrations
             migrationBuilder.InsertData(
                 table: "Incidents",
                 columns: new[] { "IncidentId", "CustomerId", "DateClosed", "DateOpened", "Description", "ProductId", "TechnicianId", "Title" },
-                values: new object[] { 3, 1, null, new DateTime(2021, 4, 9, 12, 27, 49, 411, DateTimeKind.Local).AddTicks(693), "Unknown error when attempting to open program", 1, 3, "Error while attempting to run program" });
+                values: new object[] { 3, 1, null, new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(6578), "Unknown error when attempting to open program", 1, 3, "Error while attempting to run program" });
 
             migrationBuilder.InsertData(
                 table: "Incidents",
                 columns: new[] { "IncidentId", "CustomerId", "DateClosed", "DateOpened", "Description", "ProductId", "TechnicianId", "Title" },
-                values: new object[] { 2, 3, null, new DateTime(2021, 4, 9, 12, 27, 49, 411, DateTimeKind.Local).AddTicks(674), "Encountered compatability issues", 2, 3, "Error launching program" });
+                values: new object[] { 2, 3, null, new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(6556), "Encountered compatability issues", 2, 3, "Error launching program" });
 
             migrationBuilder.InsertData(
                 table: "Incidents",
                 columns: new[] { "IncidentId", "CustomerId", "DateClosed", "DateOpened", "Description", "ProductId", "TechnicianId", "Title" },
-                values: new object[] { 1, 2, null, new DateTime(2021, 4, 9, 12, 27, 49, 411, DateTimeKind.Local).AddTicks(268), "Customer is having issues with installation on Win 10", 1, 3, "Could not install" });
+                values: new object[] { 1, 2, null, new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(5921), "Customer is having issues with installation on Win 10", 1, 3, "Could not install" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Customers_CountryId",

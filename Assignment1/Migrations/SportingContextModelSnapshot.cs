@@ -65,44 +65,36 @@ namespace Assignment1.Migrations
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CountryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PostalCode")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("State")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CustomerId");
 
@@ -170,8 +162,7 @@ namespace Assignment1.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -180,9 +171,7 @@ namespace Assignment1.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IncidentId");
 
@@ -199,7 +188,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentId = 1,
                             CustomerId = 2,
-                            DateOpened = new DateTime(2021, 4, 9, 12, 27, 49, 411, DateTimeKind.Local).AddTicks(268),
+                            DateOpened = new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(5921),
                             Description = "Customer is having issues with installation on Win 10",
                             ProductId = 1,
                             TechnicianId = 3,
@@ -209,7 +198,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentId = 2,
                             CustomerId = 3,
-                            DateOpened = new DateTime(2021, 4, 9, 12, 27, 49, 411, DateTimeKind.Local).AddTicks(674),
+                            DateOpened = new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(6556),
                             Description = "Encountered compatability issues",
                             ProductId = 2,
                             TechnicianId = 3,
@@ -219,7 +208,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentId = 3,
                             CustomerId = 1,
-                            DateOpened = new DateTime(2021, 4, 9, 12, 27, 49, 411, DateTimeKind.Local).AddTicks(693),
+                            DateOpened = new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(6578),
                             Description = "Unknown error when attempting to open program",
                             ProductId = 1,
                             TechnicianId = 3,
@@ -236,13 +225,11 @@ namespace Assignment1.Migrations
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("datetime2");
@@ -260,7 +247,7 @@ namespace Assignment1.Migrations
                             ProductId = 1,
                             Code = "TRNY10",
                             Name = "Tournament Master",
-                            ReleaseDate = new DateTime(2021, 4, 9, 12, 27, 49, 408, DateTimeKind.Local).AddTicks(2291),
+                            ReleaseDate = new DateTime(2021, 4, 8, 23, 13, 43, 245, DateTimeKind.Local).AddTicks(8979),
                             YearlyPrice = 10.99
                         },
                         new
@@ -268,7 +255,7 @@ namespace Assignment1.Migrations
                             ProductId = 2,
                             Code = "DRAFT10",
                             Name = "Draft Manager 2.0",
-                            ReleaseDate = new DateTime(2021, 4, 9, 12, 27, 49, 410, DateTimeKind.Local).AddTicks(7535),
+                            ReleaseDate = new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(2603),
                             YearlyPrice = 5.9900000000000002
                         },
                         new
@@ -276,7 +263,7 @@ namespace Assignment1.Migrations
                             ProductId = 3,
                             Code = "TRNY20",
                             Name = "Tournament Master 2.0",
-                            ReleaseDate = new DateTime(2021, 4, 9, 12, 27, 49, 410, DateTimeKind.Local).AddTicks(7571),
+                            ReleaseDate = new DateTime(2021, 4, 8, 23, 13, 43, 248, DateTimeKind.Local).AddTicks(2639),
                             YearlyPrice = 12.99
                         });
                 });
@@ -290,13 +277,11 @@ namespace Assignment1.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(21)
-                        .HasColumnType("nvarchar(21)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
