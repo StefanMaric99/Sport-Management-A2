@@ -1,4 +1,4 @@
-﻿@model IncidentsViewModel
+﻿@model Incident
 @{ ViewData["Title"] = "Add a new incident"; 
 
 }
@@ -7,54 +7,52 @@
 <form asp-action="EditIncident" asp-controller="TechIncident" method="post">
 
     <div class="form-group">
-        <label asp-for="currentIncident.CustomerId">Customer</label>
-        <select class="form-control" asp-for="currentIncident.CustomerId" asp-items="Model.customers">
-            <option value="">Select a customer...</option>
+        <label asp-for="CustomerId">Customer</label>
+        @Model.Customer.FirstName @Model.Customer.LastName
+        <select class="d-none form-control" asp-for="CustomerId">
+            <option value="@Model.CustomerId">@Model.Customer.FirstName @Model.Customer.LastName</option>
         </select>
-        <hr />
+
     </div>
     <div class="form-group">
-        <label asp-for="currentIncident.ProductId">Product</label>
-        <select class="form-control" asp-for="currentIncident.ProductId" asp-items="Model.products">
-            <option value="">Select a product...</option>
+        <label asp-for="ProductId">Product</label>
+        @Model.Product.Name
+        <select class="d-none form-control" asp-for="ProductId">
+            <option value="@Model.ProductId">@Model.Product.Name</option>
         </select>
-        <hr />
+
     </div>
     <div class="form-group">
-        <label asp-for="currentIncident.TechnicianId">Technician</label>
-        <label>Technicians</label>
-        <select class="form-control" asp-for="currentIncident.TechnicianId" asp-items="Model.technicians">
-            <option value="">Select a tech...</option>
+        <label asp-for="Title">Title</label>
+        @Model.Title
+        <input class="d-none form-control" value="@Model.Title" asp-for="Title" placeholder="Enter title here" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <textarea class="form-control" asp-for="Description" placeholder="Describe incident here"></textarea>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="DateOpened">Date Opened</label>
+        @Model.DateOpened
+        <input class="d-none form-control" asp-for="DateOpened" type="datetime-local" value="@Model.DateOpened" />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="TechnicianId">Technician</label>
+        @Model.Technician.Name
+        <select class="d-none form-control" asp-for="TechnicianId">
+            <option value="@Model.TechnicianId">@Model.Technician.Name</option>
         </select>
-        <hr />
-    </div>
 
-    <div class="form-group">
-        <label asp-for="currentIncident.Title">Title</label>
-        <input asp-for="currentIncident.Title" class="form-control">
-        @Html.ValidationMessageFor(model => model.currentIncident.Title, "", new { @class = "text-danger" })
-        <hr />
     </div>
+    <div class="form-group">
+        <label asp-for="DateClosed">Date Closed</label>
+        <input class="form-control" asp-for="DateClosed" type="datetime-local" value="" />
 
-    <div class="form-group">
-        <label asp-for="currentIncident.Description">Description</label>
-        <input asp-for="currentIncident.Description" class="form-control">
-        @Html.ValidationMessageFor(model => model.currentIncident.Description, "", new { @class = "text-danger" })
-        <hr />
     </div>
-
-    <div class="form-group">
-        <label asp-for="currentIncident.DateOpened">Date Opened</label>
-        <input asp-for="currentIncident.DateOpened" type="datetime-local" id="date">
-        <hr />
-    </div>
-
-    <div class="form-group">
-        <label asp-for="currentIncident.DateClosed">Date Closed</label>
-        <input asp-for="currentIncident.DateClosed" type="datetime-local" id="date">
-        <hr />
-    </div>
-    <input type="hidden" asp-for="currentIncident.IncidentId" />
+    <input type="hidden" asp-for="IncidentId" />
 
     <button class=" btn btn-primary" type="submit">Save</button>
     <button type="submit" class="btn btn-danger" asp-controller="TechIncident" asp-action="List">Cancel</button>
